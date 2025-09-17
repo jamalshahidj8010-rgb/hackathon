@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AyurSutra</title>
+  <link rel="stylesheet" href="sih.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="mainHeader">
+    <div class="logo"><strong>AyurSutra</strong></div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="buttons">
+      <a href="#" class="signin" onclick="openModal()">Sign In</a>
+      <a href="#getstarted" class="getstarted">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="heroSection">
+    <h1><span>Ayur</span>Sutra</h1>
+    <p>
+      Panchakarma Patient Management & Therapy Scheduling.<br>
+      Modern platform designed for patients, therapists, and administrators.
+    </p>
+    <div class="actions">
+      <a href="#get-started-free" class="primary" onclick="openModal()">Get Started Free →</a>
+      <a href="#features" class="secondary">Explore Features</a>
+      <a href="#get-started" class="primary" onclick="openModal()">Get Started →</a>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Login to AyurSutra</h2>
+      <form id="loginForm">
+        <label for="role">I am a:</label>
+        <select id="role" required>
+          <option value="">-- Select Role --</option>
+          <option value="customer">Customer</option>
+          <option value="employee">Employee</option>
+        </select>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Password</label>
+        <input type="password" id="password" required>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <p style="text-align:center; margin:15px 0;">OR</p>
+      <button class="google-btn" onclick="googleLogin()">
+        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo"> 
+        Login with Google
+      </button>
+
+      <p style="text-align:center; margin-top:10px;">
+        New user? <a href="#" onclick="registerUser()">Create Account</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Health Questionnaire -->
+  <div class="box" id="healthBox">
+    <h2>Health Questionnaire</h2>
+    <form id="healthForm">
+      <label>1. Do you have frequent headaches?</label>
+      <select name="q1">
+        <option>No</option><option>Sometimes</option><option>Often</option>
+      </select>
+
+      <label>2. How is your sleep quality?</label>
+      <select name="q2">
+        <option>Good</option><option>Average</option><option>Poor</option>
+      </select>
+
+      <label>3. Do you experience digestive issues?</label>
+      <select name="q3">
+        <option>Rarely</option><option>Sometimes</option><option>Frequently</option>
+      </select>
+
+      <label>4. How often do you exercise?</label>
+      <select name="q4">
+        <option>Daily</option><option>Few times a week</option><option>Rarely</option>
+      </select>
+
+      <label>5. Do you have stress or anxiety?</label>
+      <select name="q5">
+        <option>No</option><option>Mild</option><option>Severe</option>
+      </select>
+
+      <label>6. Any chronic illnesses (Diabetes, BP, etc.)?</label>
+      <select name="q6">
+        <option>No</option><option>Yes</option>
+      </select>
+
+      <label>7. How is your energy level?</label>
+      <select name="q7">
+        <option>High</option><option>Moderate</option><option>Low</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
